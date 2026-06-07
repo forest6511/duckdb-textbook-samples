@@ -1,3 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+
+# runtime pipeline artifacts (ch10)
+pipeline.db
+ch10-data-pipeline/output/
