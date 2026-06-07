@@ -3,8 +3,8 @@ SELECT VendorID, trip_distance, fare_amount
 FROM 'data/yellow_tripdata_sample.parquet'
 LIMIT 3;
 
--- スキーマを確認する
-DESCRIBE SELECT * FROM 'data/yellow_tripdata_sample.parquet';
+-- スキーマを確認する（FROM (DESCRIBE ...) で見やすい一覧として受け取る）
+FROM (DESCRIBE SELECT * FROM 'data/yellow_tripdata_sample.parquet');
 
 -- 件数と平均運賃を集計する
 SELECT count(*) AS trips, round(avg(fare_amount), 2) AS avg_fare
